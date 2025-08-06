@@ -199,13 +199,15 @@
             10%, 30%, 50%, 70%, 90% { transform: rotate(-3deg) scale(1.1); }
             20%, 40%, 60%, 80% { transform: rotate(3deg) scale(1.1); }
         }
-
+        }
         
         .form-input {
             border: 2px solid #e5e7eb;
             transition: border-color 0.3s ease;
             color: #1f2937 !important;
             background-color: white !important;
+            -webkit-text-fill-color: #1f2937 !important;
+            -webkit-appearance: none;
         }
         
         .form-input:focus {
@@ -213,15 +215,40 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
             color: #1f2937 !important;
+            -webkit-text-fill-color: #1f2937 !important;
         }
         
         .form-input option {
             color: #1f2937 !important;
             background-color: white !important;
+            -webkit-text-fill-color: #1f2937 !important;
         }
         
         .form-input::placeholder {
             color: #9ca3af !important;
+            -webkit-text-fill-color: #9ca3af !important;
+        }
+        
+        /* Mobile-specific fixes */
+        @media (max-width: 768px) {
+            .form-input {
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+                background: #ffffff !important;
+                -webkit-background-clip: text !important;
+                text-shadow: none !important;
+            }
+            
+            .form-input:focus {
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+            }
+            
+            .form-input::placeholder {
+                color: #666666 !important;
+                -webkit-text-fill-color: #666666 !important;
+                opacity: 1 !important;
+            }
         }
         
         /* Mobile Optimizations */
@@ -492,7 +519,7 @@
                     <div class="grid grid-cols-2 h-64 md:h-80">
                         <!-- Before Image -->
                         <div class="relative">
-                            <img src="https://i.imgur.com/mq9ek30.png" alt="Car seats before deep cleaning - stains and wear visible" class="w-full h-full object-cover">
+                            <img src="https://i.imgur.com/POJ51ql.png" alt="Car seats before deep cleaning - stains and wear visible" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
                                 <div class="text-white">
                                     <div class="text-2xl font-bold mb-1">BEFORE</div>
@@ -502,7 +529,7 @@
                         </div>
                         <!-- After Image -->
                         <div class="relative">
-                            <img src="https://i.imgur.com/POJ51ql.png" alt="Car seats after professional detailing - like new condition" class="w-full h-full object-cover">
+                            <img src="https://i.imgur.com/mq9ek30.png" alt="Car seats after professional detailing - like new condition" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
                                 <div class="text-white">
                                     <div class="text-2xl font-bold mb-1">AFTER</div>
@@ -629,7 +656,7 @@
                 <div class="pricing-card bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 text-center hover:border-blue-500 transition-colors">
                     <div class="text-blue-600 text-3xl md:text-4xl mb-4">🚗</div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Basic Clean</h3>
-                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">RM 119</div>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">RM65</div>
                     
                     <ul class="text-left space-y-3 mb-8">
                         <li class="flex items-center">
@@ -659,7 +686,7 @@
                         <div>🎯 Perfect for: Regular maintenance</div>
                     </div>
                     
-                    <button onclick="selectPackage('Basic Clean - RM 119')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    <button onclick="selectPackage('Basic Clean - RM65')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                         Choose Basic
                     </button>
                 </div>
@@ -671,7 +698,7 @@
                     </div>
                     <div class="text-yellow-600 text-3xl md:text-4xl mb-4">⭐</div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Premium Detail</h3>
-                    <div class="text-3xl md:text-4xl font-bold text-yellow-600 mb-6">RM 149</div>
+                    <div class="text-3xl md:text-4xl font-bold text-yellow-600 mb-6">RM120</div>
                     
                     <ul class="text-left space-y-3 mb-8">
                         <li class="flex items-center">
@@ -705,7 +732,7 @@
                         <div>🎯 Perfect for: Deep cleaning needs</div>
                     </div>
                     
-                    <button onclick="selectPackage('Premium Detail - RM 149')" class="w-full cta-button text-white py-3 rounded-lg font-semibold">
+                    <button onclick="selectPackage('Premium Detail - RM120')" class="w-full cta-button text-white py-3 rounded-lg font-semibold">
                         Choose Premium
                     </button>
                 </div>
@@ -714,7 +741,7 @@
                 <div class="pricing-card bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 text-center hover:border-purple-500 transition-colors">
                     <div class="text-purple-600 text-3xl md:text-4xl mb-4">👑</div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Luxury Spa</h3>
-                    <div class="text-3xl md:text-4xl font-bold text-purple-600 mb-6">RM 209</div>
+                    <div class="text-3xl md:text-4xl font-bold text-purple-600 mb-6">RM180</div>
                     
                     <ul class="text-left space-y-3 mb-8">
                         <li class="flex items-center">
@@ -748,7 +775,7 @@
                         <div>🎯 Perfect for: Special occasions</div>
                     </div>
                     
-                    <button onclick="selectPackage('Luxury Spa - RM 209')" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                    <button onclick="selectPackage('Luxury Spa - RM180')" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                         Choose Luxury
                     </button>
                 </div>
@@ -763,8 +790,8 @@
                         <div>
                             <h5 class="font-semibold text-gray-800 mb-2">Vehicle Size Surcharge:</h5>
                             <ul class="text-gray-600 space-y-1">
-                                <li>• SUV/MPV: +RM30</li>
-                                <li>• Pickup Truck: +RM35</li>
+                                <li>• SUV/MPV: +RM20</li>
+                                <li>• Pickup Truck: +RM30</li>
                                 <li>• Van/Large Vehicle: +RM40</li>
                             </ul>
                         </div>
@@ -772,8 +799,9 @@
                         <div>
                             <h5 class="font-semibold text-gray-800 mb-2">Special Offers:</h5>
                             <ul class="text-gray-600 space-y-1">
-                                <li>• First-time customers: <span class="text-green-600 font-semibold">10% OFF</span></li>
+                                <li>• First-time customers: <span class="text-green-600 font-semibold">20% OFF</span></li>
                                 <li>• Monthly package: <span class="text-green-600 font-semibold">15% OFF</span></li>
+                                <li>• Refer a friend: <span class="text-green-600 font-semibold">RM20 credit</span></li>
                             </ul>
                         </div>
                     </div>
@@ -832,9 +860,9 @@
                         <label class="block text-gray-700 font-semibold mb-2">Package Selection</label>
                         <select name="package" id="packageSelect" required class="form-input w-full px-4 py-3 rounded-lg">
                             <option value="">Choose your package</option>
-                            <option value="Basic Clean - RM65">Basic Clean - RM 119</option>
-                            <option value="Premium Detail - RM120">Premium Detail - RM 149 (Most Popular)</option>
-                            <option value="Luxury Spa - RM180">Luxury Spa - RM 209</option>
+                            <option value="Basic Clean - RM65">Basic Clean - RM65</option>
+                            <option value="Premium Detail - RM120">Premium Detail - RM120 (Most Popular)</option>
+                            <option value="Luxury Spa - RM180">Luxury Spa - RM180</option>
                         </select>
                     </div>
                     
@@ -903,23 +931,23 @@
             <div class="mb-6 md:mb-8">
                 <h3 class="text-xl md:text-2xl font-bold mb-4">Reach Us On All Platforms</h3>
                 <div class="flex flex-col gap-3 md:gap-4 justify-center items-center">
-                    <a href="https://wa.me/601121597871" class="bg-green-500 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors w-full sm:w-auto text-sm md:text-base">
-                        📱 WhatsApp: +6011-21597871
+                    <a href="https://wa.me/60123456789" class="bg-green-500 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors w-full sm:w-auto text-sm md:text-base">
+                        📱 WhatsApp: 012-345-6789
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61578627552088" class="bg-blue-600 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto text-sm md:text-base">
-                        📘 Facebook: ShinySeats Mobile Cleaning
+                    <a href="https://facebook.com/penangcardetailing" class="bg-blue-600 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto text-sm md:text-base">
+                        📘 Facebook: Penang Car Detailing
                     </a>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-6 md:pt-8">
-                <p class="text-gray-400 text-sm md:text-base">© 2024 AZH Tekun Resources. All rights reserved.</p>
+                <p class="text-gray-400 text-sm md:text-base">© 2024 Mobile Car Detailing Penang. Professional interior cleaning services across Penang Island and mainland.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/601121597871?text=Hi! I'm interested in your mobile car interior detailing service in Penang" class="floating-whatsapp">
+    <a href="https://wa.me/60123456789?text=Hi! I'm interested in your mobile car interior detailing service in Penang" class="floating-whatsapp">
         <div class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
@@ -991,7 +1019,7 @@
             submitBtn.disabled = true;
             
             // Submit to Formspree (replace YOUR_FORM_ID with your actual Formspree form ID)
-            fetch('https://formspree.io/f/xgvznrky', {
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -1024,7 +1052,7 @@
                     // Optional: Open WhatsApp with confirmation
                     const name = formData.get('name');
                     const whatsappMsg = `Hi! I just submitted a form for ${service}. My name is ${name}.`;
-                    // window.open(`https://wa.me/601121597871?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+                    // window.open(`https://wa.me/60123456789?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
                     
                 } else {
                     throw new Error('Form submission failed');
@@ -1038,7 +1066,7 @@
                 const phone = formData.get('phone');
                 const package = formData.get('package');
                 const whatsappMsg = `Hi! I'd like to inquire about your car detailing service.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nPackage: ${package}`;
-                window.open(`https://wa.me/601121597871?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+                window.open(`https://wa.me/60123456789?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
             }).finally(() => {
                 // Reset button
                 submitBtn.innerHTML = originalText;
@@ -1059,6 +1087,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ab383ec306fda0',t:'MTc1NDQ0ODU1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ab644fd66844c9',t:'MTc1NDQ1MDM1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
