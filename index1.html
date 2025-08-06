@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathe New Life Into Your Car's Interior | Mobile Car Detailing Penang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #06b6d4 100%);
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #f59e0b, #d97706);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            animation: pulse-glow 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+            animation: none;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+                transform: scale(1.02);
+            }
+        }
+        
+        .secondary-cta {
+            background: linear-gradient(45deg, #1e40af, #3b82f6);
+            color: white;
+            border: 2px solid #3b82f6;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        .secondary-cta:hover {
+            background: linear-gradient(45deg, #1d4ed8, #2563eb);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+        
+        .benefit-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        
+        .after-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(45deg, #10b981, #059669);
+            transform: translateX(100%);
+            transition: transform 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .before-after:hover .after-overlay {
+            transform: translateX(0);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #10b981;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .urgency-shake {
+            animation: urgency-shake 3s infinite;
+        }
+        
+        @keyframes urgency-shake {
+            0%, 90%, 100% { transform: translateX(0); }
+            92%, 96% { transform: translateX(-2px); }
+            94%, 98% { transform: translateX(2px); }
+        }
+        
+        .countdown-number {
+            animation: number-flash 1.5s infinite;
+        }
+        
+        @keyframes number-flash {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.7; transform: scale(1.1); }
+        }
+        
+        .attention-grabber {
+            animation: attention-pop 4s infinite;
+        }
+        
+        @keyframes attention-pop {
+            0%, 85%, 100% { transform: scale(1); }
+            87%, 91% { transform: scale(1.05); }
+            89% { transform: scale(1.08); }
+        }
+        
+        .warning-alert {
+            animation: warning-pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .warning-alert::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: warning-shine 3s infinite;
+        }
+        
+        @keyframes warning-pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(255, 193, 7, 0.6);
+            }
+        }
+        
+        @keyframes warning-shine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+        
+        .warning-icon {
+            animation: warning-shake 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes warning-shake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30%, 50%, 70%, 90% { transform: rotate(-3deg) scale(1.1); }
+            20%, 40%, 60%, 80% { transform: rotate(3deg) scale(1.1); }
+        }
+    
+        
+        .form-input {
+            border: 2px solid #e5e7eb;
+            transition: border-color 0.3s ease;
+            color: #1f2937 !important;
+            background-color: white !important;
+            -webkit-text-fill-color: #1f2937 !important;
+            -webkit-appearances: none;
+        }
+        
+        .form-input:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            color: #1f2937 !important;
+            -webkit-text-fill-color: #1f2937 !important;
+        }
+        
+        .form-input option {
+            color: #1f2937 !important;
+            background-color: white !important;
+            -webkit-text-fill-color: #1f2937 !important;
+        }
+        
+        .form-input::placeholder {
+            color: #9ca3af !important;
+            -webkit-text-fill-color: #9ca3af !important;
+        }
+        
+        /* Mobile-specific fixes */
+        @media (max-width: 768px) {
+            .form-input {
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+                background: #ffffff !important;
+                -webkit-background-clips: text !important;
+                text-shadow: none !important;
+            }
+            
+            .form-input:focus {
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+            }
+            
+            .form-input::placeholder {
+                color: #666666 !important;
+                -webkit-text-fill-color: #666666 !important;
+                opacity: 1 !important;
+            }
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .floating-whatsapp div {
+                padding: 12px;
+            }
+            
+            .floating-whatsapp svg {
+                width: 24px;
+                height: 24px;
+            }
+            
+            /* Touch-friendly buttons */
+            .cta-button, .secondary-cta, button {
+                min-height: 48px;
+                touch-action: manipulation;
+            }
+            
+            /* Better text readability on mobile */
+            .hero-gradient h1 {
+                line-height: 1.2;
+            }
+            
+            /* Improved spacing for mobile */
+            .benefit-card {
+                padding: 1.5rem;
+            }
+            
+            /* Mobile-friendly form inputs */
+            .form-input {
+                font-size: 16px; /* Prevents zoom on iOS */
+                min-height: 48px;
+            }
+            
+            /* Better mobile testimonials */
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            /* Mobile pricing cards */
+            .pricing-card {
+                margin-bottom: 2rem;
+            }
+            
+            /* Mobile before/after interaction */
+            .before-after {
+                min-height: 250px;
+            }
+            
+            .after-overlay {
+                width: 100%;
+                transform: translateY(100%);
+            }
+            
+            .before-after:active .after-overlay {
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small screens */
+            .hero-gradient {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-gradient h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-gradient h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-gradient p {
+                font-size: 1rem;
+            }
+            
+            /* Smaller buttons on very small screens */
+            .cta-button, .secondary-cta {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Compact pricing display */
+            .pricing-card h3 {
+                font-size: 1.25rem;
+            }
+            
+            .pricing-card .text-4xl {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-12 md:py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <!-- Attention-Grabbing Hook -->
+            <div class="warning-alert bg-red-500/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 mb-6 max-w-3xl mx-auto border-2 border-yellow-300">
+                <p class="text-sm sm:text-base md:text-lg font-bold text-white">
+                    <span class="warning-icon">⚠️</span> <span class="text-yellow-300">WARNING:</span> Your car's interior is making you SICK! Bacteria, allergens & bad odors are attacking your health daily...
+                </p>
+            </div>
+            
+            <!-- Bold, Benefit-Driven Headline -->
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                From <span class="text-red-300 line-through">DISGUSTING</span> to 
+                <span class="text-yellow-300">PRISTINE</span> in 2 Hours!
+            </h1>
+            
+            <!-- Subheadline with Social Proof -->
+            <div class="mb-6">
+                <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-100 mb-2">
+                    The #1 Mobile Car Interior Detailing Service in Penang
+                </p>
+            </div>
+            
+            <!-- Problem Agitation -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 mb-8 max-w-4xl mx-auto">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-yellow-300">
+                    Are You EMBARRASSED by Your Car's Interior?
+                </h2>
+                <div class="grid sm:grid-cols-2 gap-4 text-left text-blue-100">
+                    <div class="space-y-2">
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Coffee stains that won't come out?</p>
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Funky smells that make passengers uncomfortable?</p>
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Crumbs and dirt everywhere you look?</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Sticky surfaces that feel gross to touch?</p>
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Pet hair that's impossible to remove?</p>
+                        <p class="flex items-center"><span class="text-red-400 mr-2">❌</span> Ashamed to give friends a ride?</p>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-yellow-400/20 rounded-lg border border-yellow-300">
+                    <p class="text-yellow-100 font-semibold text-center">
+                        💡 <strong>STOP SUFFERING!</strong> Your car should be your sanctuary, not your source of stress...
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Transformation Promise -->
+            <div class="bg-green-500/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 mb-8 max-w-4xl mx-auto border-2 border-green-400">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-green-300">
+                    🎯 IMAGINE THIS: Walking to Your Car Tomorrow Morning...
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-left text-green-100">
+                    <div class="space-y-2">
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> Fresh, clean air that smells amazing</p>
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> Spotless seats that look brand new</p>
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> Dashboard so clean it sparkles</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> Carpets free from stains and odors</p>
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> PRIDE when friends see your car</p>
+                        <p class="flex items-center"><span class="text-green-400 mr-2">✅</span> A healthier environment for your family</p>
+                    </div>
+                </div>
+                <p class="text-center text-green-200 font-semibold mt-4 text-lg">
+                    This isn't a dream... <span class="text-yellow-300">IT'S YOUR REALITY IN JUST 2 HOURS!</span>
+                </p>
+            </div>
+            
+            <!-- Urgency & Scarcity -->
+            <div class="bg-gradient-to-r from-purple-600/90 to-pink-600/90 backdrop-blur-sm rounded-xl p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-300 shadow-lg urgency-shake">
+                <p class="text-white font-bold text-lg mb-2">⏰ LIMITED TIME OFFER!</p>
+                <p class="text-white font-semibold">
+                    Only <span class="text-yellow-200 text-xl font-bold countdown-number">12 SLOTS</span> available this week! 
+                    <span class="text-purple-100">Don't let another day pass feeling ashamed of your car...</span>
+                </p>
+            </div>
+            
+            <!-- Primary CTAs Above the Fold -->
+            <div class="flex flex-col gap-4 justify-center mb-8">
+                <button onclick="scrollToForm('trial')" class="cta-button text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-bold w-full sm:w-auto attention-grabber">
+                    📅 Book Your Trial Interior Clean Today!
+                </button>
+                <button onclick="scrollToForm('waitlist')" class="cta-button text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-bold w-full sm:w-auto">
+                    🎁 Join Waitlist for Exclusive Offers!
+                </button>
+            </div>
+            
+            <button onclick="scrollToForm('quote')" class="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors w-full sm:w-auto">
+                💬 Request Free Quote or Callback
+            </button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="benefit-card bg-blue-50 p-4 sm:p-6 rounded-xl text-center">
+                    <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🚗</div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">On-Demand Service</h3>
+                    <p class="text-sm sm:text-base text-gray-600">We come to you, anywhere in Penang.</p>
+                </div>
+                
+                <div class="benefit-card bg-green-50 p-4 sm:p-6 rounded-xl text-center">
+                    <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">✨</div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Deep Interior Cleaning</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Seats, carpets, dashboards, and more.</p>
+                </div>
+                
+                <div class="benefit-card bg-yellow-50 p-4 sm:p-6 rounded-xl text-center">
+                    <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🌱</div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Safe & Eco-Friendly</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Non-toxic products, safe for kids and pets.</p>
+                </div>
+                
+                <div class="benefit-card bg-purple-50 p-4 sm:p-6 rounded-xl text-center">
+                    <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Affordable Packages</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Quality service without breaking the bank.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="py-12 md:py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">See the Difference!</h2>
+                <p class="text-lg md:text-xl text-gray-600">Real transformations from our Penang customers</p>
+            </div>
+            
+            <div class="grid gap-6 md:grid-cols-3 md:gap-8">
+                <!-- Before/After Comparison 1 -->
+                <div class="before-after-container relative overflow-hidden rounded-xl shadow-lg">
+                    <div class="grid grid-cols-2 h-64 md:h-80">
+                        <!-- Before Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/NxSHweJ.png" alt="Car interior before cleaning - dirty seats and dashboard" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">BEFORE</div>
+                                    <div class="text-sm">Dirty, stained interior</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- After Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/EhJ4TZb.png" alt="Car interior after professional cleaning - spotless and fresh" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">AFTER</div>
+                                    <div class="text-sm">Spotless & Fresh!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After Comparison 2 -->
+                <div class="before-after-container relative overflow-hidden rounded-xl shadow-lg">
+                    <div class="grid grid-cols-2 h-64 md:h-80">
+                        <!-- Before Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/mq9ek30.png" alt="Car seats before deep cleaning - stains and wear visible" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">BEFORE</div>
+                                    <div class="text-sm">Worn, stained seats</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- After Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/POJ51ql.png" alt="Car seats after professional detailing - like new condition" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">AFTER</div>
+                                    <div class="text-sm">Like Brand New!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After Comparison 3 -->
+                <div class="before-after-container relative overflow-hidden rounded-xl shadow-lg">
+                    <div class="grid grid-cols-2 h-64 md:h-80">
+                        <!-- Before Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/5BFdmGp.png" alt="Car dashboard before cleaning - dusty and messy" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">BEFORE</div>
+                                    <div class="text-sm">Dusty dashboard</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- After Image -->
+                        <div class="relative">
+                            <img src="https://i.imgur.com/8zVMw1B.png" alt="Car dashboard after professional cleaning - pristine condition" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
+                                <div class="text-white">
+                                    <div class="text-2xl font-bold mb-1">AFTER</div>
+                                    <div class="text-sm">Pristine Clean!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-6 md:mt-8">
+                <p class="text-gray-600 italic text-sm md:text-base">
+                    Real before & after photos from our Penang customers - see the incredible transformation!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-12 md:py-20 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say:</h2>
+                <p class="text-lg md:text-xl text-blue-100">Real reviews from satisfied customers across Penang</p>
+            </div>
+            
+            <!-- Top Row - 3 Reviews -->
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+                <!-- Review 1 -->
+                <div class="testimonial-card p-6 md:p-8 rounded-xl">
+                    <div class="text-3xl md:text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-800 text-base md:text-lg mb-4 italic">
+                        "Amazing service! My Honda City was filthy inside with coffee stains and food crumbs everywhere. After their Premium Detail package, it looks and smells like a brand new car. Worth every ringgit!"
+                    </p>
+                    <div class="text-gray-700 font-semibold">— Afiq Rahman, Bayan Lepas</div>
+                    <div class="text-gray-600 text-sm mt-1">Premium Detail Package</div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="testimonial-card p-6 md:p-8 rounded-xl">
+                    <div class="text-3xl md:text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-800 text-base md:text-lg mb-4 italic">
+                        "Fast, thorough, and affordable! They came right to my office in George Town. My Myvi's interior was transformed in just 2 hours. The leather seats look amazing now. Highly recommend!"
+                    </p>
+                    <div class="text-gray-700 font-semibold">— Mei Ling Tan, George Town</div>
+                    <div class="text-gray-600 text-sm mt-1">Basic Clean Package</div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="testimonial-card p-6 md:p-8 rounded-xl">
+                    <div class="text-3xl md:text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-800 text-base md:text-lg mb-4 italic">
+                        "Exceptional service! My kids had made such a mess in our Toyota Innova. The Luxury Spa package completely restored it. Even removed odors I thought were permanent. My wife was amazed!"
+                    </p>
+                    <div class="text-gray-700 font-semibold">— Kumar Selvam, Butterworth</div>
+                    <div class="text-gray-600 text-sm mt-1">Luxury Spa Package</div>
+                </div>
+            </div>
+            
+            <!-- Bottom Row - 2 Reviews Centered -->
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <!-- Review 4 -->
+                <div class="testimonial-card p-6 md:p-8 rounded-xl">
+                    <div class="text-3xl md:text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-800 text-base md:text-lg mb-4 italic">
+                        "Professional and reliable! Booked online and they arrived exactly on time at my condo in Gurney. My BMW's interior was deep cleaned perfectly. Great value for money. Will definitely book again!"
+                    </p>
+                    <div class="text-gray-700 font-semibold">— Sarah Lim, Gurney Plaza</div>
+                    <div class="text-gray-600 text-sm mt-1">Premium Detail Package</div>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="testimonial-card p-6 md:p-8 rounded-xl">
+                    <div class="text-3xl md:text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-800 text-base md:text-lg mb-4 italic">
+                        "Outstanding results! My Proton X70 had pet hair everywhere and stubborn stains from my dog. They used special tools that completely removed everything. The car smells fresh and looks pristine!"
+                    </p>
+                    <div class="text-gray-700 font-semibold">— Jennifer Wong, Tanjung Bungah</div>
+                    <div class="text-gray-600 text-sm mt-1">Luxury Spa Package</div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing Plans</h2>
+                <p class="text-lg md:text-xl text-gray-600">Choose the perfect package for your car's needs</p>
+            </div>
+            
+            <div class="grid gap-6 md:grid-cols-3 md:gap-8">
+                <!-- Basic Package -->
+                <div class="pricing-card bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 text-center hover:border-blue-500 transition-colors">
+                    <div class="text-blue-600 text-3xl md:text-4xl mb-4">🚗</div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Basic Clean</h3>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">RM 119</div>
+                    
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Vacuum all seats & carpets</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Dashboard & console cleaning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Interior windows cleaning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Air freshener application</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Door panels wiping</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-sm text-gray-500 mb-6">
+                        <div>⏱️ Duration: 45-60 minutes</div>
+                        <div>🎯 Perfect for: Regular maintenance</div>
+                    </div>
+                    
+                    <button onclick="selectPackage('Basic Clean - RM 119')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Choose Basic
+                    </button>
+                </div>
+                
+                <!-- Premium Package (Most Popular) -->
+                <div class="pricing-card bg-white border-4 border-yellow-400 rounded-2xl p-6 md:p-8 text-center relative md:transform md:scale-105">
+                    <div class="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-yellow-600 text-3xl md:text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Premium Detail</h3>
+                    <div class="text-3xl md:text-4xl font-bold text-yellow-600 mb-6">RM 149</div>
+                    
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span><strong>Everything in Basic</strong></span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Deep seat shampooing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Stain removal treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Leather conditioning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Odor elimination treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Trunk/boot cleaning</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-sm text-gray-500 mb-6">
+                        <div>⏱️ Duration: 90-120 minutes</div>
+                        <div>🎯 Perfect for: Deep cleaning needs</div>
+                    </div>
+                    
+                    <button onclick="selectPackage('Premium Detail - RM 149')" class="w-full cta-button text-white py-3 rounded-lg font-semibold">
+                        Choose Premium
+                    </button>
+                </div>
+                
+                <!-- Luxury Package -->
+                <div class="pricing-card bg-white border-2 border-gray-200 rounded-2xl p-6 md:p-8 text-center hover:border-purple-500 transition-colors">
+                    <div class="text-purple-600 text-3xl md:text-4xl mb-4">👑</div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Luxury Spa</h3>
+                    <div class="text-3xl md:text-4xl font-bold text-purple-600 mb-6">RM 209</div>
+                    
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span><strong>Everything in Premium</strong></span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Steam cleaning treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>UV protection application</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Premium leather treatment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Fabric protection coating</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>30-day satisfaction guarantee</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-sm text-gray-500 mb-6">
+                        <div>⏱️ Duration: 2-3 hours</div>
+                        <div>🎯 Perfect for: Special occasions</div>
+                    </div>
+                    
+                    <button onclick="selectPackage('Luxury Spa - RM 209')" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                        Choose Luxury
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Additional Pricing Info -->
+            <div class="mt-12 text-center">
+                <div class="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-4">Additional Information</h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">Vehicle Size Surcharge:</h5>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• SUV/MPV: +RM30</li>
+                                <li>• Pickup Truck: +RM35</li>
+                                <li>• Van/Large Vehicle: +RM40</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">Special Offers:</h5>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• First-time customers: <span class="text-green-600 font-semibold">10% OFF</span></li>
+                                <li>• Monthly package: <span class="text-green-600 font-semibold">15% OFF</span></li>
+                                <li>• Refer a friend: <span class="text-green-600 font-semibold">RM20 credit</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p class="text-green-800 font-semibold">
+                            🎉 <strong>Limited Time:</strong> Book any package today and get a FREE car air freshener (worth RM15)!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Main Booking Form Section -->
+    <section id="booking-form" class="py-12 md:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready for a Fresh Start?</h2>
+                <p class="text-lg md:text-xl text-blue-100">Choose your preferred service option below</p>
+            </div>
+            
+
+            
+            <!-- Simple Form -->
+            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 md:p-8 max-w-2xl mx-auto shadow-2xl border border-white/20">
+                <form id="bookingForm" class="space-y-4 md:space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input name="name" type="text" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="Your full name">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Phone/WhatsApp</label>
+                        <input name="phone" type="tel" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="012-345-6789">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                        <input name="email" type="email" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Preferred Service</label>
+                        <select name="service" id="serviceSelect" required class="form-input w-full px-4 py-3 rounded-lg">
+                            <option value="">Select your preference</option>
+                            <option value="Trial Interior Clean">Trial Interior Clean</option>
+                            <option value="Waitlist for Exclusive Offers">Waitlist for Exclusive Offers</option>
+                            <option value="Free Quote/Callback">Free Quote/Callback</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Package Selection</label>
+                        <select name="package" id="packageSelect" required class="form-input w-full px-4 py-3 rounded-lg">
+                            <option value="">Choose your package</option>
+                            <option value="Basic Clean - RM 119">Basic Clean - RM 119</option>
+                            <option value="Premium Detail - RM 149">Premium Detail - RM 149 (Most Popular)</option>
+                            <option value="Luxury Spa - RM 209">Luxury Spa - RM 209</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Car Model</label>
+                        <input name="carModel" type="text" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="e.g., Honda City, Toyota Vios">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Location in Penang</label>
+                        <select name="location" required class="form-input w-full px-4 py-3 rounded-lg">
+                            <option value="">Select your area</option>
+                            <option value="George Town">George Town</option>
+                            <option value="Bayan Lepas">Bayan Lepas</option>
+                            <option value="Butterworth">Butterworth</option>
+                            <option value="Gurney Plaza">Gurney Plaza</option>
+                            <option value="Tanjung Bungah">Tanjung Bungah</option>
+                            <option value="Jelutong">Jelutong</option>
+                            <option value="Prai">Prai</option>
+                            <option value="Other Penang Area">Other Penang Area</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full cta-button text-white px-8 py-4 rounded-lg text-lg font-bold">
+                        🚀 Get Started
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">FAQ</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">How long does it take?</h3>
+                    <p class="text-gray-600">About 1–2 hours, depending on your car.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Do I need to be present?</h3>
+                    <p class="text-gray-600">Not necessarily — just unlock your car for us!</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">What areas do you cover?</h3>
+                    <p class="text-gray-600">All of Penang Island and mainland.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">What's included in the service?</h3>
+                    <p class="text-gray-600">Deep cleaning of seats, carpets, dashboard, and complete interior detailing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-6 md:mb-8">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Reach Us On All Platforms</h3>
+                <div class="flex flex-col gap-3 md:gap-4 justify-center items-center">
+                    <a href="https://wa.me/601121597871" class="bg-green-500 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors w-full sm:w-auto text-sm md:text-base">
+                        📱 WhatsApp: +60-1121597871
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61578627552088" class="bg-blue-600 text-white px-4 md:px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto text-sm md:text-base">
+                        📘 Facebook: ShinySeats Mobile Cleaning
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 md:pt-8">
+                <p class="text-gray-400 text-sm md:text-base">© 2024 AZH Tekun Resources. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/601121597871?text=Hi! I'm interested in your mobile car interior detailing service in Penang" class="floating-whatsapp">
+        <div class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </div>
+    </a>
+
+    <script>
+        function scrollToForm(serviceType) {
+            document.getElementById('booking-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            if (serviceType) {
+                setTimeout(() => {
+                    selectService(serviceType);
+                }, 500);
+            }
+        }
+        
+        function selectService(serviceType) {
+            // Reset all buttons
+            document.querySelectorAll('.service-option').forEach(btn => {
+                btn.classList.remove('cta-button', 'secondary-cta');
+                btn.classList.add('bg-gray-300', 'text-gray-700');
+            });
+            
+            // Highlight selected button and update form
+            const selectedBtn = document.getElementById(serviceType + '-btn');
+            const serviceSelect = document.getElementById('serviceSelect');
+            
+            selectedBtn.classList.remove('bg-gray-300', 'text-gray-700');
+            
+            switch(serviceType) {
+                case 'trial':
+                    selectedBtn.classList.add('cta-button');
+                    selectedBtn.classList.remove('text-gray-700');
+                    selectedBtn.classList.add('text-white');
+                    serviceSelect.value = 'Trial Interior Clean';
+                    break;
+                case 'waitlist':
+                    selectedBtn.classList.add('secondary-cta');
+                    serviceSelect.value = 'Waitlist for Exclusive Offers';
+                    break;
+                case 'quote':
+                    selectedBtn.classList.add('bg-gray-600', 'text-white');
+                    serviceSelect.value = 'Free Quote/Callback';
+                    break;
+            }
+        }
+        
+        function selectPackage(packageName) {
+            document.getElementById('packageSelect').value = packageName;
+            scrollToForm();
+        }
+        
+        // Formspree Integration
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const service = formData.get('service');
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '⏳ Submitting...';
+            submitBtn.disabled = true;
+            
+            // Submit to Formspree (replace YOUR_FORM_ID with your actual Formspree form ID)
+            fetch('https://formspree.io/f/xgvznrky', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Success message based on service type
+                    let message = '';
+                    switch(service) {
+                        case 'Trial Interior Clean':
+                            message = '🎉 Thank you! We\'ll contact you within 2 hours to schedule your trial interior clean.';
+                            break;
+                        case 'Waitlist for Exclusive Offers':
+                            message = '🎁 Welcome to our VIP waitlist! You\'ll be the first to know about exclusive offers and discounts.';
+                            break;
+                        case 'Free Quote/Callback':
+                            message = '📞 Thank you! We\'ll call you back within 1 hour with a personalized quote for your car.';
+                            break;
+                        default:
+                            message = '✅ Thank you for your interest! We\'ll be in touch soon.';
+                    }
+                    
+                    // Show success message
+                    alert(message);
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Optional: Open WhatsApp with confirmation
+                    const name = formData.get('name');
+                    const whatsappMsg = `Hi! I just submitted a form for ${service}. My name is ${name}.`;
+                    // window.open(`https://wa.me/601121597871?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+                    
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch((error) => {
+                console.error('Error:', error);
+                alert('⚠️ There was an issue submitting your form. Please try again or contact us directly via WhatsApp.');
+                
+                // Fallback: Open WhatsApp with form data
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const package = formData.get('package');
+                const whatsappMsg = `Hi! I'd like to inquire about your car detailing service.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nPackage: ${package}`;
+                window.open(`https://wa.me/601121597871?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+            }).finally(() => {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96af0d19c5c3492b',t:'MTc1NDQ4ODcyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
